@@ -41,7 +41,7 @@ What is insertion sorts worst-case time
   theta - notation: drop low order terms, ignore leading constants
   Ex: 3n^3 + 90*n^2 -5n + 6046 = theat(n^3)
     as n-> inf, theta(n^2) algorithm always beats theta(n^3)
- =============================
+ ===============================================
  Insertion sort analysis
  Worst-case: inputs reverse sorted
     for j: 2-> n
@@ -51,10 +51,37 @@ What is insertion sorts worst-case time
           do A[i+1] <- A[i]
           i <- i-1
        A[i+1] <- key
+       
+T(n) = sum[theta(j) from 2 to n] = theta(n^2)
+For small n, sorting is fast, but not for large n.
 
- 
- 
- 
+==================================================
+Merge sort:
+1. Merge sort A[1....n]   //  theta(1) 
+2. Recursively sort       //  2T(n/2)
+    A[1.....n/2] and      //  
+    A[(n/2)+1.....n]      //
+3. merge and sorted lists //  theta(n)
+
+Key subroutine - merge
+A1 = 20 13 7 2
+A2 = 12 11 9 1
+Time = theta(n) on n total elements
+fatkun
+Recurrence:
+T(n) = theta(1), if n = 1; 2T(n/2) + theta(n) if n>1
+
+Recursion tree. T(n) = 2T(n/2) + cn, (cn: constant time of n, cn>0)
+
+T(n) = cn ---T(n/2) = cn -- cn/2 -- T(n/4)
+         |---T(n/2)             |-- T(n/4)
+                        |-- cn/2 -- T(n/4)
+                                |-- T(n/4)......theta(1)
+
+layer: height of tree: h = lg(n)
+leaf: 2^h
+
+                     
  
  
  
