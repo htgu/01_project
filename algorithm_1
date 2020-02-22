@@ -81,6 +81,9 @@ T(n) = cn ---T(n/2) = cn -- cn/2 -- T(n/4)
 layer: height of tree: h = lg(n)
 leaf: 2^h
 
+theta(n*lg(n)) > theta(n^2)
+merge sort is faster than insert sort.
+=====================================================
                      
  
  
