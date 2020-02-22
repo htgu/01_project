@@ -1,2 +1,61 @@
 This is the first course of MIT algorithm
 http://open.163.com/newview/movie/free?pid=M6UTT5U0I&mid=M6V2T1JGF
+
+Note:
+1. Analysis of Algorithms：
+ the theoretical study of computer program performance and resource usage.
+ User-friendly
+======================================= 
+ Problem of sorting:
+ Input: sequenency <a1, a2, a3...> of number S
+ OutputL permutation <a1', a2' ,a3'....>
+ Such that a1' < a2' < a3' ....
+ 
+ a. Insertion sort
+ Running time: 
+ depends on input (eg, inpuots already sorted)
+ depends on inout size (eg: 6 elem vs. 6x10^9)
+      -parameterize input size
+ want upper bounds
+============================================ 
+ Kinds of analysis:
+  worst-case analysis
+    T(n) = max time on any input of size n.
+ 
+  Average-case (sometimes)
+    T(n) = expected time over all inputs of size n.
+    (need assumption of statistical distribution of inputs)
+ 
+Best-case analysis (bogus 假象）
+============================================
+What is insertion sorts worst-case time
+  Depends on computer
+  -relative speed (on same machine)
+  -absolute speed (on different machine)
+ 
+ Asymptotic notation
+  1. ignore machine dependence consstants
+  2. look at growth T(n) -- running time
+ 
+ notation:
+  theta - notation: drop low order terms, ignore leading constants
+  Ex: 3n^3 + 90*n^2 -5n + 6046 = theat(n^3)
+    as n-> inf, theta(n^2) algorithm always beats theta(n^3)
+ =============================
+ Insertion sort analysis
+ Worst-case: inputs reverse sorted
+    for j: 2-> n
+       do key <- A[j]
+       i <- j-1
+       while i > 0 and A[i] > key
+          do A[i+1] <- A[i]
+          i <- i-1
+       A[i+1] <- key
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
