@@ -1,0 +1,51 @@
+Astmptotic notation
+f(n) = O(g(n)) means: there are consts c>0, n0>0, such that 0<= f(n)<= c*g(n)
+(for all n >== n0), big O corrsponds roughly to less than or equal to.
+
+Set definition:
+O(g(n)) = {
+f(n):
+there are consts c>0, n0 > 0
+such that 0 <= f(n) <= c*g(n)
+for alll n >= n0
+}
+
+EX: 2n^2 = O(n^3) -> means 2n^2 in the set of O(n^3)
+
+Macro convertion:
+A set in a formula represents an anonymous function that set.
+Ex: f(n) = n^3 +O(n^2)
+means there is a function h(n) in O(n^2), such that f(n) = n^3 + h(n)
+
+----------------------
+omega notation:
+omega(g(n)) = {f(n):
+there exist consts c> 0, n0>0
+such that 0<= c*g(n)<= f(n)
+}
+
+===================================
+Solving recurrences:
+  -subsitution method
+   1. guess the form of the solution
+   2. verify by induction
+   3. solve for consts
+   Ex: T(n) = 4T(n/2)+n
+       [T(1) = theta(1)]
+       -guess T(n) = O(n^3)
+       -Assume T(k) <= c*k^3 for k<n
+       -T(n) = 4T(n/2) +n <= 4*c*(n/2)^3 +n = 1/2*c*n^3 +n
+        = c*n^3 - (1/2*c*n^3 -n) <= c*n^3, if 1/2*c*n*3 -n >=0
+        
+       
+        
+   
+   
+   
+   
+   
+   
+
+
+
+
